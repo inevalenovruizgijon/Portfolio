@@ -1,0 +1,22 @@
+.formulario {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem !important;
+  border-top: 4px solid #4f46e5;
+}
+.formulario .campo label {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+.formulario .campo input {
+  padding: 0.6rem;
+}
+.formulario .campo textarea {
+  padding: 0.6rem;
+  height: 100px;
+  min-height: 80px;
+}
+.formulario button {
+  padding: 0.6rem !important;
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,6 @@
+@use "../base/vars" as v;
+
+.header {
+    background-color: v.$oscuro;
+    padding: 2rem 0;
+}

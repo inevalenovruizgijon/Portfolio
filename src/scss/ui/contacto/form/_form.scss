@@ -1,0 +1,30 @@
+@use "../../base/vars" as v;
+
+.formulario {
+    display: grid;
+    gap: 1rem; // Reducimos el espacio entre campos (antes 1.5rem)
+    padding: 1.5rem !important; // Reducimos el relleno interno del cuadro blanco
+    border-top: 4px solid v.$primario;
+
+    .campo {
+        label {
+            margin-bottom: 0.2rem; // Etiquetas más pegadas al input
+            font-size: 0.9rem; // Fuente un pelín más pequeña
+        }
+
+        input {
+            padding: 0.6rem; // Antes era 1rem, esto lo hace mucho más fino
+        }
+
+        textarea {
+            padding: 0.6rem;
+            height: 100px; // Limitamos la altura del cuadro de mensaje
+            min-height: 80px;
+        }
+    }
+
+    button {
+        padding: 0.6rem !important; // Botón más estrecho
+        margin-top: 0.5rem;
+    }
+}
