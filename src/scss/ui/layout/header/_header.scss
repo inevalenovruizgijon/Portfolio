@@ -1,6 +1,41 @@
-@use "../base/vars" as v;
+@use '../../base/vars' as v;
+@use '../../base/mixins' as m;
 
 .header {
-    background-color: v.$oscuro;
-    padding: 2rem 0;
+    background-color: v.$oscuro; // El fondo oscuro que tienes
+    padding: 1.5rem 0;
+
+    &__contenedor {
+        @include m.do-flex(row, space-between, center);
+    }
+
+    &__logo {
+        a {
+            color: v.$blanco; 
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.nav {
+    @include m.do-flex(row, flex-end, center, 2.5rem);
+
+    &__link {
+        color: rgba(v.$blanco, 0.7);
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s;
+
+        &:hover {
+            color: v.$blanco;
+        }
+
+        &--active {
+            color: v.$primario; 
+            border-bottom: 2px solid v.$primario;
+        }
+    }
 }

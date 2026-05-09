@@ -1,14 +1,16 @@
 html {
-    height: 100%;
+    font-size: 15px; 
+    
+    @media (min-width: 768px) {
+        font-size: 16px; 
+    }
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%; // Esto obliga al body a ser tan alto como la pantalla
-    margin: 0;
+    overflow-x: hidden; 
 }
 
-main {
-    flex: 1; // Este comando "empuja" al footer hacia abajo al ocupar todo el espacio sobrante
+img {
+    max-width: 100%; 
+    height: auto;
 }

@@ -1,0 +1,49 @@
+@use "../base/mixins" as m;
+@use "../base/vars" as v;
+.formulario {
+    @include m.do-grid(1, 1rem); 
+    padding: 1.5rem !important; 
+    border-top: 4px solid v.$primario;
+    background-color: v.$blanco;
+    border-radius: v.$radio;
+    box-shadow: v.$sombra;
+
+    .campo {
+        label {
+            display: block;
+            margin-bottom: 0.2rem; 
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: v.$oscuro;
+        }
+
+        input, textarea {
+            @include m.box-sizing(border-box); 
+            width: 100%;
+            padding: 0.6rem; 
+            border: 1px solid #e1e1e1;
+            border-radius: 0.5rem;
+            font-family: v.$fuente_principal;
+            
+            &:focus {
+                outline: none;
+                border-color: v.$primario;
+            }
+        }
+
+        textarea {
+            height: 100px; 
+            min-height: 80px;
+            resize: none; 
+        }
+    }
+
+    button {
+        @include m.btn(v.$primario, v.$blanco);
+        padding: 0.8rem;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+}

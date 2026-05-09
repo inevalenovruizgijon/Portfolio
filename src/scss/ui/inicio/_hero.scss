@@ -1,0 +1,75 @@
+@use '../base/vars' as v;
+@use '../base/mixins' as m;
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+
+    &__grid {
+        @include m.do-grid(1, 3rem); 
+
+        @include m.desktop {
+            @include m.do-grid(2, 3rem); 
+            align-items: center;
+        }
+    }
+
+    &__texto {
+        text-align: center;
+        
+        @include m.desktop {
+            text-align: left;
+        }
+
+        h1 {
+            font-family: v.$fuente_principal;
+            font-size: 2.8rem; 
+            line-height: 1.1;
+
+            @include m.desktop {
+                font-size: 4rem; 
+            }
+
+            span { 
+                color: v.$primario; 
+                display: block; 
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+
+            @include m.tablet {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__boton {
+        @include m.btn(v.$primario, v.$blanco); 
+        margin-top: 2rem;
+    }
+
+    &__foto {
+        margin-top: 2rem;
+
+        @include m.desktop {
+            margin-top: 0;
+        }
+
+        img {
+            @include m.box-sizing(border-box);
+            width: 100%;
+            max-width: 400px; 
+            height: auto;
+            border-radius: v.$radio;
+            border: 4px solid v.$blanco;
+            box-shadow: v.$sombra_fuerte; 
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}

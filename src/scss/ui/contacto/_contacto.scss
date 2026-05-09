@@ -1,0 +1,66 @@
+@use '../base/vars' as v;
+@use '../base/mixins' as m;
+
+.contacto {
+    padding: 4rem 0;
+
+    &__titulo {
+        text-align: center;
+        font-family: v.$fuente_principal;
+        font-weight: 900;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: v.$oscuro;
+    }
+
+    &__grid {
+        @include m.do-grid(1, 3rem); // 1 columna en móvil
+
+        @include m.desktop {
+            @include m.do-grid(2, 5rem); // 2 columnas en PC
+            align-items: center;
+        }
+    }
+
+    &__info {
+        text-align: center;
+        @include m.desktop { text-align: left; }
+    }
+
+    &__subtitulo {
+        font-size: 2rem;
+        color: v.$oscuro;
+        margin-bottom: 1rem;
+    }
+
+    &__detalles {
+        margin: 2rem 0;
+    }
+
+    &__item {
+        @include m.do-flex(row, center, center, 1rem);
+        margin-bottom: 1rem;
+        @include m.desktop { justify-content: flex-start; }
+
+        i {
+            color: v.$primario;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__redes {
+        @include m.do-flex(row, center, center, 1.5rem);
+        @include m.desktop { justify-content: flex-start; }
+    }
+
+    &__social {
+        font-size: 1.8rem;
+        color: v.$oscuro;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            color: v.$primario;
+            transform: translateY(-3px);
+        }
+    }
+}
