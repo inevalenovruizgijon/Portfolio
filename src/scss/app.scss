@@ -1,4 +1,5 @@
-@use "ui/base";
-@use "ui/contacto";
-@use "ui/layout";
-@use "ui/proyectos";
+@forward "ui/base";
+@forward "ui/contacto";
+@forward "ui/inicio";
+@forward "ui/layout";
+@forward "ui/proyectos";

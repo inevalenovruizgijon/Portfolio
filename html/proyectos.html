@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Iaroslav Nevalenov</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../src/scss/app.css">
+    <link rel="icon" href="https://res.cloudinary.com/dsuymln4b/image/upload/q_auto/f_auto/v1778354247/android-chrome-512x512_w0lrfh.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="menu">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">I<span>N</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false" aria-label="navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li><a class="nav-link" href="index.html">Sobre mí</a></li>
+                        <li><a class="nav-link active" href="proyectos.html" aria-current="page">Proyectos</a></li>
+                        <li><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <main class="container py-5">
+    <div class="seccion-header">
+        <h1 class="seccion-titulo">Mis Proyectos</h1>
+    </div>
+
+    <div class="proyectos-lista">
+        
+        <article class="proyecto-card">
+            <div class="proyecto-card__info">
+                <span class="proyecto-card__tag">Angular + Laravel</span>
+                <h2 class="proyecto-card__titulo">PokéBuscador</h2>
+                <p class="proyecto-card__descripcion">
+                    Un buscador avanzado de cartas Pokémon que consume una API externa. Desarrollado con Angular para una interfaz reactiva y Laravel en el backend para gestionar favoritos y usuarios.
+                </p>
+                <div class="proyecto-card__acciones">
+                    <a href="http://ruix.iesruizgijon.es/inevalenov/Pokemon_Angular/" target="_blank" class="btn-principal">Explorar Proyecto</a>
+                    <a href="https://github.com/inevalenovruizgijon/Proyecto_Angular" target="_blank" class="btn-outline"><i class="fa-brands fa-github"></i> Código</a>
+                </div>
+            </div>
+            <div class="proyecto-card__visual">
+                <img src="https://res.cloudinary.com/dsuymln4b/image/upload/q_auto/f_auto/v1778353505/Captura_de_pantalla_2026-05-09_210416_nl9ddz.png" alt="PokéBuscador Preview">
+            </div>
+        </article>
+
+        <article class="proyecto-card proyecto-card--reverse">
+            <div class="proyecto-card__info">
+                <span class="proyecto-card__tag">Laravel</span>
+                <h3 class="proyecto-card__titulo">Barbería App</h3>
+                <p class="proyecto-card__descripcion">
+                    Sistema integral de gestión de citas. Los clientes pueden reservar su turno online y los barberos disponen de un panel de administración para gestionar su agenda diaria de forma eficiente.
+                </p>
+                <div class="proyecto-card__acciones">
+                    <a href="https://github.com/inevalenovruizgijon/Proyecto-Laravel" target="_blank" class="btn-outline"><i class="fa-brands fa-github"></i> Ver Código en GitHub</a>
+                </div>
+            </div>
+            <div class="proyecto-card__visual">
+                <img src="https://res.cloudinary.com/dsuymln4b/image/upload/q_auto/f_auto/v1778328502/Captura_de_pantalla_2026-05-09_140800_ahfip1.png" alt="Barbería App Preview">
+            </div>
+        </article>
+
+    </div>
+</main>
+
+    <footer class="bg-dark text-white py-4 text-center mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 - Iaroslav Nevalenov</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

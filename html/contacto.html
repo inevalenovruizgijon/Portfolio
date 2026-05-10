@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Iaroslav Nevalenov</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../src/scss/app.css">
+    <link rel="icon" href="https://res.cloudinary.com/dsuymln4b/image/upload/q_auto/f_auto/v1778354247/android-chrome-512x512_w0lrfh.png">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">I<span>N</span></a>
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">Sobre mí</a>
+                    <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    <a class="nav-link active" href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow-1 d-flex align-items-center">
+        <section class="contacto container section py-5">
+            <div class="seccion-header text-center">
+                <h1 class="seccion-titulo">Contacto</h1> 
+            </div>
+            <div class="contacto__grid">
+                
+                <div class="contacto__info">
+                    <h2 class="contacto__subtitulo">¿Hablamos?</h2>
+                    <p class="contacto__texto">
+                        Si tienes un proyecto en mente o quieres mejorar tu presencia digital, no dudes en escribirme.
+                    </p>
+                    
+                    <div class="contacto__detalles">
+                        <div class="contacto__item">
+                            <i class="bi bi-envelope-at"></i>
+                            <span><a href="mailto:nevalenov.iaroslav@gmail.com"> nevalenov.iaroslav@gmail.com</a></span>
+                        </div>
+                        <div class="contacto__item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Utrera, Sevilla</span>
+                        </div>
+                    </div>
+
+                    <div class="contacto__redes">
+                        <a href="#" class="contacto__social" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>Iaroslav Nevalenov</span>
+                        </a>
+                        <a href="https://instagram.com/iaroslav_n_" class="contacto__social" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>iaroslav_n_</span>
+                        </a>
+                        <a href="https://github.com/iaroslavnu" class="contacto__social" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            <span>iaroslavnu</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="formulario needs-validation" novalidate>
+                    <div class="formulario__header">
+                        <h3 class="formulario__frase">Contact Me</h3>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+                        <div class="invalid-feedback">Por favor, escriba su nombre.</div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@gmail.com" required>
+                        <div class="invalid-feedback">Introduce un correo válido.</div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="¿En qué puedo ayudarte?"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+
+            </div> 
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-3 text-center">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 Iaroslav Nevalenov</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

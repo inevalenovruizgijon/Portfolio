@@ -2,65 +2,84 @@
 @use '../base/mixins' as m;
 
 .contacto {
-    padding: 4rem 0;
+    padding: 6rem 0;
+    background-color: #f8f9fa; 
 
     &__titulo {
         text-align: center;
-        font-family: v.$fuente_principal;
-        font-weight: 900;
+        margin-bottom: 4rem;
         font-size: 3rem;
-        margin-bottom: 3rem;
-        color: v.$oscuro;
+        font-weight: 900;
+        position: relative;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: v.$primario;
+            margin: 1rem auto;
+        }
     }
 
     &__grid {
-        @include m.do-grid(1, 3rem); // 1 columna en móvil
+        max-width: 1000px; 
+        margin: 0 auto;    
+        display: grid;
+        gap: 2rem;
+        align-items: center;
 
-        @include m.desktop {
-            @include m.do-grid(2, 5rem); // 2 columnas en PC
-            align-items: center;
+        @media (min-width: 992px) {
+            grid-template-columns: 1fr 1.2fr; 
+            gap: 5rem;
         }
     }
 
     &__info {
-        text-align: center;
-        @include m.desktop { text-align: left; }
-    }
+        padding: 1rem;
 
-    &__subtitulo {
-        font-size: 2rem;
-        color: v.$oscuro;
-        margin-bottom: 1rem;
+        .contacto__subtitulo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contacto__texto {
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
     }
 
     &__detalles {
-        margin: 2rem 0;
-    }
-
-    &__item {
-        @include m.do-flex(row, center, center, 1rem);
-        margin-bottom: 1rem;
-        @include m.desktop { justify-content: flex-start; }
-
-        i {
-            color: v.$primario;
-            font-size: 1.5rem;
+        .contacto__item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            
+            i { color: v.$primario; font-size: 1.3rem; }
         }
     }
 
     &__redes {
-        @include m.do-flex(row, center, center, 1.5rem);
-        @include m.desktop { justify-content: flex-start; }
-    }
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
-    &__social {
-        font-size: 1.8rem;
-        color: v.$oscuro;
-        transition: color 0.3s ease, transform 0.3s ease;
+        .contacto__social {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: v.$oscuro;
+            font-weight: 700;
+            transition: color 0.3s;
 
-        &:hover {
-            color: v.$primario;
-            transform: translateY(-3px);
+            i { font-size: 1.8rem; color: v.$primario; }
+            &:hover { color: v.$primario; }
         }
     }
 }
